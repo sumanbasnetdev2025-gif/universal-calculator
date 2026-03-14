@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-plus-jakarta)", "sans-serif"],
-        display: ["var(--font-syne)", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
-      },
+  sans: ["var(--font-poppins)", "sans-serif"],
+  display: ["var(--font-poppins)", "sans-serif"],
+  mono: ["var(--font-jetbrains)", "monospace"],
+},
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

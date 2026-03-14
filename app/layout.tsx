@@ -1,19 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Syne, JetBrains_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/layout/ThemeProvider";
 import Navbar from "@/components/ui/layout/navbar";
 import Footer from "@/components/ui/layout/footer";
 
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"], variable: "--font-plus-jakarta", display: "swap",
-});
-const syne = Syne({
-  subsets: ["latin"], variable: "--font-syne", display: "swap",
-});
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"], variable: "--font-jetbrains", display: "swap",
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300","400","500","600","700"],
+  variable: "--font-poppins",
 });
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calcnepal.com";
@@ -74,7 +71,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${plusJakarta.variable} ${syne.variable} ${jetbrains.variable}`}>
+     <body className={`${poppins.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -4,28 +4,38 @@
 
 @layer base {
   :root {
-    /* ── Clean light theme matching screenshots ── */
-    --background:           220 20% 97%;
-    --foreground:           222 20% 12%;
-    --card:                 0 0% 100%;
-    --card-foreground:      222 20% 12%;
-    --popover:              0 0% 100%;
-    --popover-foreground:   222 20% 12%;
-    --primary:              246 80% 60%;
-    --primary-foreground:   0 0% 100%;
-    --secondary:            220 15% 94%;
-    --secondary-foreground: 222 20% 20%;
-    --muted:                220 15% 94%;
-    --muted-foreground:     220 10% 48%;
-    --accent:               246 80% 96%;
-    --accent-foreground:    246 80% 40%;
-    --destructive:          0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    --border:               220 15% 88%;
-    --input:                220 15% 88%;
-    --ring:                 246 80% 60%;
-    --radius:               0.875rem;
-  }
+
+  --background:           210 40% 98%;
+  --foreground:           222 47% 11%;
+
+  --card:                 0 0% 100%;
+  --card-foreground:      222 47% 11%;
+
+  --popover:              0 0% 100%;
+  --popover-foreground:   222 47% 11%;
+
+  --primary:              250 84% 60%;
+  --primary-foreground:   0 0% 100%;
+
+  --secondary:            210 30% 96%;
+  --secondary-foreground: 222 47% 20%;
+
+  --muted:                210 30% 96%;
+  --muted-foreground:     215 16% 46%;
+
+  --accent:               250 100% 97%;
+  --accent-foreground:    250 84% 50%;
+
+  --destructive:          0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border:               214 32% 91%;
+  --input:                214 32% 91%;
+
+  --ring:                 250 84% 60%;
+
+  --radius:               0.9rem;
+}
 
   .dark {
     --background:           240 15% 9%;
@@ -52,18 +62,20 @@
 
 @layer base {
   * { @apply border-border; }
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: var(--font-plus-jakarta), sans-serif;
-  }
+ body {
+  @apply bg-background text-foreground antialiased;
+font-family: var(--font-poppins), sans-serif;
+  line-height: 1.6;
+}
   h1, h2, h3, h4 {
-    font-family: var(--font-syne), sans-serif;
-  }
+  font-family: var(--font-syne), sans-serif;
+  letter-spacing: -0.02em;
+}
 }
 
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -91,6 +103,6 @@
   .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
 
   .card-hover {
-    @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg;
-  }
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
 }

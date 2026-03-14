@@ -110,17 +110,20 @@ function ToolCard({ tool }: { tool: typeof TOOLS[0] }) {
   return (
     <Link href={tool.href}>
       <div className={cn(
-        "group bg-white dark:bg-white/5 rounded-2xl border border-border/60 p-5",
-        "hover:border-border hover:shadow-md transition-all duration-200 hover:-translate-y-0.5",
-        "cursor-pointer h-full flex flex-col"
+        "group bg-card rounded-2xl border border-border/60 p-5",
+"hover:border-violet-300/60 dark:hover:border-violet-700",
+"hover:shadow-lg transition-all duration-300 hover:-translate-y-1",
       )}>
         <div className="flex items-start justify-between mb-3">
-          <div className={cn("w-10 h-10 rounded-xl flex items-center justify-center", tool.bg)}>
+          <div className={cn(
+  "w-10 h-10 rounded-xl flex items-center justify-center",
+  "bg-gradient-to-br", tool.grad
+)}>
             <Icon className={cn("w-5 h-5", tool.color)} />
           </div>
           <ArrowRight className="w-4 h-4 text-muted-foreground/40 group-hover:text-muted-foreground group-hover:translate-x-0.5 transition-all mt-1" />
         </div>
-        <h3 className="font-display text-sm sm:text-[15px] font-semibold text-foreground mb-1.5 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
+        <h3 className="font-display text-sm sm:text-[15px] tracking-tight font-semibold text-foreground mb-1.5 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
           {tool.title}
         </h3>
         <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1">
@@ -130,7 +133,7 @@ function ToolCard({ tool }: { tool: typeof TOOLS[0] }) {
           {tool.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2 py-0.5 rounded-full bg-secondary text-muted-foreground"
+              className="text-xs px-2 py-0.5 rounded-full bg-secondary/70 text-muted-foreground backdrop-blur"
             >
               {tag}
             </span>
@@ -146,17 +149,21 @@ export default function HomePage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
 
       {/* Hero */}
-      <div className="mb-10 sm:mb-12">
+<div className="mb-10 sm:mb-12 relative">
+  <div className="absolute -top-10 -left-10 w-72 h-72 bg-violet-500/10 blur-3xl rounded-full" />
   
-        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3">
-          Smart Calculators<br />
-          <span className="text-violet-500">for Every Need</span>
-        </h1>
-        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xl">
-          From BS/AD date conversion to NEA electricity bills — all the calculators
-          Nepalis actually use, in one clean place.
-        </p>
-      </div>
+      <div className="relative z-10 max-w-xl">
+    <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-3">
+      Smart Calculators
+      <br />
+      <span className="text-primary">for Every Need</span>
+    </h1>
+    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+      From BS/AD date conversion to NEA electricity bills — all the calculators
+      Nepalis actually use, in one clean place.
+    </p>
+  </div>
+</div>
 
       {/* Tool grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
@@ -181,5 +188,6 @@ export default function HomePage() {
         ))}
       </div>
     </div>
+  
   );
 }
