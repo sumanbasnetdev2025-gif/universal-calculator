@@ -8,6 +8,8 @@ import {
 } from "@/components/ui-kit/calc-layout";
 import { cn } from "@/lib/utils";
 import { adToBS, bsToAD, calculateAge, calculateAgeInBS, dateDifference, NEPALI_MONTHS } from "@/lib/nepali-date";
+import { CalcShell } from "@/components/ui-kit/calc-layout";
+import TimeDifference from "@/components/ui/calculators/date-converter/time-difference";
 
 // ── AD ↔ BS ───────────────────────────────────────────────────────────────────
 function ADToBSCalc() {
@@ -260,8 +262,7 @@ function DateDiffCalc() {
 
 // ── Time Difference (inline from earlier) ─────────────────────────────────────
 // (Import the existing TimeDifference component)
-import TimeDifference from "./time-difference";
-import { CalcShell } from "../ui-kit/calc-layout";
+
 
 // ── Main export ───────────────────────────────────────────────────────────────
 type DateTab = "convert"|"age"|"date-diff"|"time-diff";
