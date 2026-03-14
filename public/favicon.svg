@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="#2563eb"/>
+
+  <!-- Calculator screen -->
+  <rect x="14" y="12" width="36" height="12" rx="3" fill="#e5e7eb"/>
+
+  <!-- Buttons -->
+  <g fill="#ffffff">
+    <rect x="14" y="30" width="8" height="8" rx="2"/>
+    <rect x="24" y="30" width="8" height="8" rx="2"/>
+    <rect x="34" y="30" width="8" height="8" rx="2"/>
+    <rect x="44" y="30" width="6" height="18" rx="2" fill="#f59e0b"/>
+
+    <rect x="14" y="40" width="8" height="8" rx="2"/>
+    <rect x="24" y="40" width="8" height="8" rx="2"/>
+    <rect x="34" y="40" width="8" height="8" rx="2"/>
+  </g>
+
+  <!-- Universal math symbol -->
+  <text x="32" y="21" text-anchor="middle" font-size="10" font-family="Arial, sans-serif" fill="#111827">∑</text>
+</svg>

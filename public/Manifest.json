@@ -1,0 +1,33 @@
+{
+  "name": "CalcNepal — Smart Calculators for Nepal",
+  "short_name": "CalcNepal",
+  "description": "Free online calculators built for Nepal — BS/AD, NEA bill, EMI, land units, salary & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#16161f",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/opengraph-image",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}
