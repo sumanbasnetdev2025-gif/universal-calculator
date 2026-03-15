@@ -44,7 +44,7 @@ export function CalcShell({
       </div>
 
       {/* Tab bar */}
-      <div className="border-b border-border mb-6">
+      <div className="border-b border-border mb-8 sm:mb-12">
         <nav className="flex gap-0 overflow-x-auto scrollbar-none -mb-px">
           {tabs.map((tab) => (
             <button
@@ -74,7 +74,7 @@ export function CalcShell({
 // 2-col on desktop (form | result), stacked on mobile
 export function CalcGrid({ children }: { children: React.ReactNode }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
       {children}
     </div>
   );

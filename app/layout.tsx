@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   icons: {
-    icon:    [{ url: "/icon", type: "image/png" }],
-    apple:   [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
-    shortcut: "/icon",
+    icon:    [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple:   [{ url: "/logo.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.svg",
   },
 };
 

@@ -32,15 +32,15 @@ const LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-white/[0.02] mt-16">
+    <footer className="border-t border-border bg-secondary mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
 
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center">
-                <Calculator className="w-4 h-4 text-white" />
+              <div className="w-8 h-8 rounded-xl overflow-hidden flex items-center justify-center">
+                <img src="/logo.png" alt="CalcNepal Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-display text-lg font-bold">
                 Calc<span className="text-violet-400">Nepal</span>

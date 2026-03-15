@@ -61,8 +61,8 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
-              <Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl overflow-hidden flex items-center justify-center shadow-lg shadow-violet-500/20">
+              <img src="/logo.png" alt="CalcNepal Logo" className="w-full h-full object-cover" />
             </div>
             <span className="font-display text-lg sm:text-xl font-bold">
               Calc<span className="text-violet-400">Nepal</span>
